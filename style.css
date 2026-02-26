@@ -357,9 +357,11 @@ body {
 
 /* ── Install Cards ── */
 .install-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 640px;
     margin: 0 auto;
 }
@@ -370,15 +372,30 @@ body {
     border-radius: 12px;
     padding: 1.5rem;
     text-align: left;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
-    gap: 0.75rem;
+    width: calc(50% - 0.625rem);
+    margin-bottom: 1.25rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.install-card:nth-child(odd) {
+    margin-right: 1.25rem;
 }
 
 .install-card-header {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: baseline;
     align-items: baseline;
+    margin-bottom: 0.75rem;
 }
 
 .install-card-name {
@@ -397,13 +414,20 @@ body {
     font-size: 0.88rem;
     color: var(--text-secondary);
     line-height: 1.55;
+    -webkit-flex: 1;
     flex: 1;
+    margin-bottom: 0.75rem;
 }
 
 .install-card-buttons {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    gap: 0.5rem;
     margin-top: 0.25rem;
+}
+
+.install-card-buttons .btn + .btn {
+    margin-left: 0.5rem;
 }
 
 .btn-sm {
@@ -516,6 +540,15 @@ footer a:hover {
     }
 
     .install-cards {
-        grid-template-columns: 1fr;
+        display: block;
+    }
+
+    .install-card {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .install-card:nth-child(odd) {
+        margin-right: 0;
     }
 }
