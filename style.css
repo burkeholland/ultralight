@@ -95,7 +95,7 @@ body {
 .hero-sub {
     font-size: 1.15rem;
     color: var(--text-secondary);
-    max-width: 520px;
+    max-width: 600px;
     margin-bottom: 2.5rem;
     line-height: 1.65;
 }
@@ -270,6 +270,38 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+}
+
+/* ── Capabilities ── */
+.capabilities {
+    padding: 2rem 0 4rem;
+}
+
+.capabilities h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.cap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem;
+}
+
+.cap-item h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cap-item p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
 }
 
 /* ── Agent Detail Rows ── */
@@ -448,6 +480,10 @@ footer a:hover {
     .pipeline-agents {
         width: 100%;
         align-items: center;
+    }
+
+    .cap-grid {
+        grid-template-columns: 1fr;
     }
 
     .agent-row {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ultralight — Multi-Model Orchestration for VS Code</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code that uses the best AI model for every task — Sonnet orchestrates, Opus plans, Codex codes, Gemini designs.">
+    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code. Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, Gemini 3.1 designs. It researches your codebase, builds a plan, parallelizes work across subagents, and follows strict coding principles.">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
         <section class="hero">
             <h1>The right model<br>for the <span class="accent-coral">right job</span></h1>
-            <p class="hero-sub">A multi-agent orchestration framework for VS Code. Opus plans. Codex codes. Gemini designs. One prompt is all it takes.</p>
+            <p class="hero-sub">A multi-agent orchestration framework for VS Code that researches your codebase, builds a phased plan, and delegates work to specialist subagents running in parallel. Claude Opus 4.6 orchestrates and plans. GPT-5.3-Codex writes the code. Gemini 3.1 handles design. One prompt is all it takes.</p>
             <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary">Install in VS Code</a>
         </section>
 
@@ -32,7 +32,7 @@
                 </div>
                 <div class="pipeline-line"></div>
                 <div class="pipeline-node node-orchestrator">
-                    <span class="node-model">Claude Sonnet</span>
+                    <span class="node-model">Claude Opus 4.6</span>
                     <span class="node-label">Orchestrator</span>
                 </div>
                 <div class="pipeline-fan">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="pipeline-agents">
                     <div class="pipeline-node node-planner">
-                        <span class="node-model">Claude Opus</span>
+                        <span class="node-model">Claude Opus 4.6</span>
                         <span class="node-label">Planner</span>
                     </div>
                     <div class="pipeline-node node-coder">
@@ -57,13 +57,43 @@
             </div>
         </section>
 
+        <section class="capabilities">
+            <h2>What it does</h2>
+            <div class="cap-grid">
+                <div class="cap-item">
+                    <h3>Researches first</h3>
+                    <p>Before writing a single line of code, the Planner agent reads your codebase, checks documentation via Context7, and understands existing patterns and conventions.</p>
+                </div>
+                <div class="cap-item">
+                    <h3>Plans with precision</h3>
+                    <p>Every request becomes a structured, step-by-step implementation plan with explicit file assignments — so the orchestrator knows exactly what can be parallelized and what needs to wait.</p>
+                </div>
+                <div class="cap-item">
+                    <h3>Parallelizes work</h3>
+                    <p>The orchestrator detects file overlaps between tasks and runs independent work simultaneously. Multiple Coder and Designer agents execute in parallel while a sequencing layer prevents conflicts.</p>
+                </div>
+                <div class="cap-item">
+                    <h3>Follows coding principles</h3>
+                    <p>The Coder agent is guided by strict principles for structure, architecture, naming, and error handling — producing consistent, production-quality code every time.</p>
+                </div>
+                <div class="cap-item">
+                    <h3>Delegates, never dictates</h3>
+                    <p>The orchestrator tells agents <em>what</em> to build, never <em>how</em>. Each specialist has full autonomy to use its own expertise, leading to better results than micromanaged prompts.</p>
+                </div>
+                <div class="cap-item">
+                    <h3>Coordinates end-to-end</h3>
+                    <p>From a single prompt to a finished feature — research, planning, implementation, and design all flow through one coordinated pipeline. You stay in the loop without managing the pieces.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="agents">
             <div class="agent-row">
                 <div class="agent-name">
-                    <span class="agent-model">Claude Sonnet</span>
+                    <span class="agent-model">Claude Opus 4.6</span>
                     <span class="agent-role accent-coral">Orchestrator</span>
                 </div>
-                <p class="agent-desc">Receives your request, analyzes context, and delegates to specialized agents. Integrates results and validates the final output. The brain of the operation.</p>
+                <p class="agent-desc">Breaks your request into phased execution plans, detects file overlaps to determine what can run in parallel, and delegates to specialist agents. It tells agents <em>what</em> to build — never <em>how</em> — so each one operates with full autonomy. Coordinates everything, implements nothing.</p>
             </div>
             <hr class="divider">
             <div class="agent-row">
@@ -71,7 +101,7 @@
                     <span class="agent-model">Claude Opus 4.6</span>
                     <span class="agent-role accent-sky">Planner</span>
                 </div>
-                <p class="agent-desc">Researches the codebase, consults documentation, and creates comprehensive implementation plans. Identifies edge cases before a single line of code is written.</p>
+                <p class="agent-desc">Researches the codebase, consults documentation, and produces step-by-step implementation plans with explicit file assignments. The orchestrator uses these file lists to parallelize work and prevent conflicts — no two agents ever touch the same file at the same time.</p>
             </div>
             <hr class="divider">
             <div class="agent-row">
@@ -79,7 +109,7 @@
                     <span class="agent-model">GPT-5.3-Codex</span>
                     <span class="agent-role accent-coral">Coder</span>
                 </div>
-                <p class="agent-desc">Writes production code following strict principles — structure, architecture, naming, error handling. Built for precision and consistency.</p>
+                <p class="agent-desc">Writes production code scoped to specific files to avoid conflicts with parallel tasks. Multiple Coder instances can run simultaneously on different parts of the codebase, each focused on a single responsibility.</p>
             </div>
             <hr class="divider">
             <div class="agent-row">
@@ -87,7 +117,7 @@
                     <span class="agent-model">Gemini 3.1</span>
                     <span class="agent-role accent-sage">Designer</span>
                 </div>
-                <p class="agent-desc">Handles all UI/UX and design work with emphasis on usability, accessibility, and aesthetics. Makes things look and feel right.</p>
+                <p class="agent-desc">Owns all UI/UX — color palettes, component styling, layout, and visual design. Assigned to distinct component subtrees so design work runs in parallel with logic implementation without stepping on anyone's toes.</p>
             </div>
         </section>
 
