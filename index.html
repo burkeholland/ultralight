@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ultralight — Multi-Model Orchestration for VS Code</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code that uses the best AI model for every task — Sonnet for planning, Codex for coding, Gemini for design.">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo">ultralight<span class="logo-dot">.</span></a>
+            <a href="https://gist.github.com/burkeholland/0e68481f96e94bbb98134fa6efd00436" class="nav-link" target="_blank" rel="noopener">GitHub</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <h1>The right model<br>for the <span class="gradient-text">right job</span></h1>
+            <p class="hero-sub">A multi-agent orchestration framework for VS Code. Sonnet plans. Codex codes. Gemini designs. One prompt is all it takes.</p>
+            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary">Install in VS Code</a>
+        </section>
+
+        <section class="flow" aria-label="Orchestration flow">
+            <div class="flow-label">How it works</div>
+            <div class="pipeline">
+                <div class="pipeline-node pipeline-input">
+                    <span class="node-icon">→</span>
+                    <span class="node-label">Your Prompt</span>
+                </div>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node pipeline-orchestrator">
+                    <span class="node-model">Claude Sonnet</span>
+                    <span class="node-label">Orchestrator</span>
+                </div>
+                <div class="pipeline-fan">
+                    <div class="fan-line fan-line-top"></div>
+                    <div class="fan-line fan-line-mid"></div>
+                    <div class="fan-line fan-line-bot"></div>
+                </div>
+                <div class="pipeline-agents">
+                    <div class="pipeline-node pipeline-agent">
+                        <span class="node-model">GPT-5.2</span>
+                        <span class="node-label">Planner</span>
+                    </div>
+                    <div class="pipeline-node pipeline-agent">
+                        <span class="node-model">GPT-5.3-Codex</span>
+                        <span class="node-label">Coder</span>
+                    </div>
+                    <div class="pipeline-node pipeline-agent">
+                        <span class="node-model">Gemini 3 Pro</span>
+                        <span class="node-label">Designer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="agents">
+            <div class="agent-row">
+                <div class="agent-name">
+                    <span class="agent-model gradient-text">Claude Sonnet</span>
+                    <span class="agent-role">Orchestrator</span>
+                </div>
+                <p class="agent-desc">Receives your request, analyzes context, and delegates to specialized agents. Integrates results and validates the final output. The brain of the operation.</p>
+            </div>
+            <hr class="divider">
+            <div class="agent-row">
+                <div class="agent-name">
+                    <span class="agent-model gradient-text">GPT-5.2</span>
+                    <span class="agent-role">Planner</span>
+                </div>
+                <p class="agent-desc">Researches the codebase, consults documentation, and creates comprehensive implementation plans. Identifies edge cases before a single line of code is written.</p>
+            </div>
+            <hr class="divider">
+            <div class="agent-row">
+                <div class="agent-name">
+                    <span class="agent-model gradient-text">GPT-5.3-Codex</span>
+                    <span class="agent-role">Coder</span>
+                </div>
+                <p class="agent-desc">Writes production code following strict principles — structure, architecture, naming, error handling. Built for precision and consistency.</p>
+            </div>
+            <hr class="divider">
+            <div class="agent-row">
+                <div class="agent-name">
+                    <span class="agent-model gradient-text">Gemini 3 Pro</span>
+                    <span class="agent-role">Designer</span>
+                </div>
+                <p class="agent-desc">Handles all UI/UX and design work with emphasis on usability, accessibility, and aesthetics. Makes things look and feel right.</p>
+            </div>
+        </section>
+
+        <section class="install">
+            <h2>Get Started</h2>
+            <p class="install-sub">Install the agents into VS Code. Enable <em>Use custom agent in Subagent</em> and <em>Memory</em> in settings. That's it.</p>
+            <div class="install-buttons">
+                <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-outline">
+                    VS Code
+                </a>
+                <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary">
+                    VS Code Insiders
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built by <a href="https://postrboard.com" target="_blank" rel="noopener">Burke Holland</a></p>
+    </footer>
+
+</body>
+</html>

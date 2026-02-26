@@ -1,0 +1,417 @@
+:root {
+    --bg-gradient: linear-gradient(to bottom right, #fafafe, #eef2ff, #f0fdfa);
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #06b6d4);
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --max-width: 960px;
+    --border-radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ── Header ── */
+.site-header {
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: rgba(250, 250, 254, 0.75);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.logo-dot {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
+}
+
+/* ── Hero ── */
+.hero {
+    padding: 7rem 0 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-sub {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+/* ── Buttons ── */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--accent-gradient);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1.5px solid rgba(79, 70, 229, 0.3);
+    box-shadow: none;
+}
+
+.btn-outline:hover {
+    border-color: rgba(79, 70, 229, 0.6);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+/* ── Flow Diagram ── */
+.flow {
+    padding: 3rem 0 4rem;
+}
+
+.flow-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+}
+
+.pipeline-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.node-icon {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.node-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.node-model {
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pipeline-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, rgba(79, 70, 229, 0.15), rgba(79, 70, 229, 0.4));
+    flex-shrink: 0;
+}
+
+.pipeline-orchestrator {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    box-shadow: var(--glass-shadow);
+}
+
+.pipeline-fan {
+    width: 60px;
+    height: 130px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.fan-line {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: rgba(79, 70, 229, 0.2);
+}
+
+.fan-line-top {
+    top: 18px;
+    transform: rotate(-22deg);
+    transform-origin: left center;
+}
+
+.fan-line-mid {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fan-line-bot {
+    bottom: 18px;
+    transform: rotate(22deg);
+    transform-origin: left center;
+}
+
+.pipeline-agents {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pipeline-agent {
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.2s;
+}
+
+.pipeline-agent:hover {
+    transform: translateX(4px);
+}
+
+/* ── Agent Detail Rows ── */
+.agents {
+    padding: 3rem 0 4rem;
+}
+
+.agent-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.agent-name {
+    flex-shrink: 0;
+    min-width: 200px;
+}
+
+.agent-model {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.agent-role {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.agent-desc {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 520px;
+    line-height: 1.65;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(79, 70, 229, 0.12), transparent);
+}
+
+/* ── Install Section ── */
+.install {
+    text-align: center;
+    padding: 4rem 0 5rem;
+}
+
+.install h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.install-sub {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+.install-sub em {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.install-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── Footer ── */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--text-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .hero {
+        padding: 5rem 0 3rem;
+    }
+
+    .pipeline {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .pipeline-line {
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom, rgba(79, 70, 229, 0.15), rgba(79, 70, 229, 0.4));
+    }
+
+    .pipeline-fan {
+        width: 120px;
+        height: 30px;
+    }
+
+    .fan-line-top {
+        transform: rotate(-15deg);
+    }
+
+    .fan-line-bot {
+        transform: rotate(15deg);
+    }
+
+    .pipeline-agents {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .agent-row {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .agent-name {
+        min-width: 0;
+    }
+}
