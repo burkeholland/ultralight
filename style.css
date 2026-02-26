@@ -355,6 +355,62 @@ body {
     flex-wrap: wrap;
 }
 
+/* ── Install Cards ── */
+.install-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.install-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.install-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.install-card-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.install-card-model {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.install-card-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    flex: 1;
+}
+
+.install-card-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.btn-sm {
+    padding: 0.45rem 1rem;
+    font-size: 0.82rem;
+}
+
 /* ── Prerequisites ── */
 .prereqs {
     max-width: 520px;
@@ -457,5 +513,9 @@ footer a:hover {
 
     .agent-name {
         min-width: 0;
+    }
+
+    .install-cards {
+        grid-template-columns: 1fr;
     }
 }
