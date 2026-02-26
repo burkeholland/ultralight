@@ -103,8 +103,8 @@ body {
 /* ── Orbital Graphic ── */
 .orbital {
     position: relative;
-    width: 240px;
-    height: 240px;
+    width: 260px;
+    height: 260px;
     margin-bottom: 3rem;
 }
 
@@ -115,7 +115,7 @@ body {
 }
 
 .orbital-ring-1 {
-    inset: 20px;
+    inset: 30px;
 }
 
 .orbital-ring-2 {
@@ -140,8 +140,11 @@ body {
 
 .orbital-body {
     position: absolute;
+    top: 50%;
+    left: 50%;
     z-index: 3;
-    animation: orbit-float 20s linear infinite;
+    width: 0;
+    height: 0;
 }
 
 .orbital-body span {
@@ -155,14 +158,11 @@ body {
     background: #fff;
     border: 1.5px solid;
     white-space: nowrap;
+    transform: translate(-50%, -50%);
 }
 
 .body-opus {
-    top: 50%;
-    left: 50%;
-    margin-left: -22px;
-    margin-top: -12px;
-    animation: orbit-opus 18s linear infinite;
+    animation: orbit-opus 20s linear infinite;
 }
 
 .body-opus span {
@@ -171,11 +171,7 @@ body {
 }
 
 .body-codex {
-    top: 50%;
-    left: 50%;
-    margin-left: -24px;
-    margin-top: -12px;
-    animation: orbit-codex 18s linear infinite;
+    animation: orbit-codex 20s linear infinite;
 }
 
 .body-codex span {
@@ -184,11 +180,7 @@ body {
 }
 
 .body-gemini {
-    top: 50%;
-    left: 50%;
-    margin-left: -28px;
-    margin-top: -12px;
-    animation: orbit-gemini 18s linear infinite;
+    animation: orbit-gemini 20s linear infinite;
 }
 
 .body-gemini span {
@@ -197,18 +189,18 @@ body {
 }
 
 @keyframes orbit-opus {
-    0%   { transform: rotate(0deg)    translateX(110px) rotate(0deg); }
-    100% { transform: rotate(360deg)  translateX(110px) rotate(-360deg); }
+    0%   { transform: rotate(0deg)    translate(120px) rotate(0deg); }
+    100% { transform: rotate(360deg)  translate(120px) rotate(-360deg); }
 }
 
 @keyframes orbit-codex {
-    0%   { transform: rotate(120deg)  translateX(110px) rotate(-120deg); }
-    100% { transform: rotate(480deg)  translateX(110px) rotate(-480deg); }
+    0%   { transform: rotate(120deg)  translate(120px) rotate(-120deg); }
+    100% { transform: rotate(480deg)  translate(120px) rotate(-480deg); }
 }
 
 @keyframes orbit-gemini {
-    0%   { transform: rotate(240deg)  translateX(110px) rotate(-240deg); }
-    100% { transform: rotate(600deg)  translateX(110px) rotate(-600deg); }
+    0%   { transform: rotate(240deg)  translate(120px) rotate(-240deg); }
+    100% { transform: rotate(600deg)  translate(120px) rotate(-600deg); }
 }
 
 /* ── Buttons ── */
