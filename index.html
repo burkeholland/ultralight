@@ -20,7 +20,7 @@
 
         <section class="hero">
             <h1>The right model<br>for the <span class="gradient-text">right job</span></h1>
-            <p class="hero-sub">A multi-agent orchestration framework for VS Code. Sonnet plans. Codex codes. Gemini designs. One prompt is all it takes.</p>
+            <p class="hero-sub">A multi-agent orchestration framework for VS Code. Opus plans. Codex codes. Gemini designs. One prompt is all it takes.</p>
             <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary">Install in VS Code</a>
         </section>
 
@@ -43,7 +43,7 @@
                 </div>
                 <div class="pipeline-agents">
                     <div class="pipeline-node pipeline-agent">
-                        <span class="node-model">GPT-5.2</span>
+                        <span class="node-model">Claude Opus</span>
                         <span class="node-label">Planner</span>
                     </div>
                     <div class="pipeline-node pipeline-agent">
@@ -51,7 +51,7 @@
                         <span class="node-label">Coder</span>
                     </div>
                     <div class="pipeline-node pipeline-agent">
-                        <span class="node-model">Gemini 3 Pro</span>
+                        <span class="node-model">Gemini 3.1</span>
                         <span class="node-label">Designer</span>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
             <hr class="divider">
             <div class="agent-row">
                 <div class="agent-name">
-                    <span class="agent-model gradient-text">GPT-5.2</span>
+                    <span class="agent-model gradient-text">Claude Opus 4.6</span>
                     <span class="agent-role">Planner</span>
                 </div>
                 <p class="agent-desc">Researches the codebase, consults documentation, and creates comprehensive implementation plans. Identifies edge cases before a single line of code is written.</p>
@@ -85,7 +85,7 @@
             <hr class="divider">
             <div class="agent-row">
                 <div class="agent-name">
-                    <span class="agent-model gradient-text">Gemini 3 Pro</span>
+                    <span class="agent-model gradient-text">Gemini 3.1</span>
                     <span class="agent-role">Designer</span>
                 </div>
                 <p class="agent-desc">Handles all UI/UX and design work with emphasis on usability, accessibility, and aesthetics. Makes things look and feel right.</p>
@@ -94,7 +94,27 @@
 
         <section class="install">
             <h2>Get Started</h2>
-            <p class="install-sub">Install the agents into VS Code. Enable <em>Use custom agent in Subagent</em> and <em>Memory</em> in settings. That's it.</p>
+            <p class="install-sub">Install the agents into VS Code. Enable <em>Use custom agent in Subagent</em> and <em>Memory</em> in settings.</p>
+
+            <div class="prereqs">
+                <h3 class="prereqs-label">Prerequisites</h3>
+                <div class="prereq-row">
+                    <div class="prereq-name">
+                        <span class="prereq-title">Context7 MCP Server</span>
+                    </div>
+                    <p class="prereq-desc">Provides up-to-date documentation lookup for any library. Used by the Coder agent to write accurate, current code.</p>
+                    <a href="https://context7.com" class="prereq-link" target="_blank" rel="noopener">context7.com →</a>
+                </div>
+                <hr class="divider">
+                <div class="prereq-row">
+                    <div class="prereq-name">
+                        <span class="prereq-title">Frontend Design Skill</span>
+                    </div>
+                    <p class="prereq-desc">A reusable skill from skills.sh that gives the Designer agent advanced frontend and UI capabilities.</p>
+                    <a href="https://skills.sh" class="prereq-link" target="_blank" rel="noopener">skills.sh →</a>
+                </div>
+            </div>
+
             <div class="install-buttons">
                 <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-outline">
                     VS Code

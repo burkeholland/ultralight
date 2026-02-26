@@ -352,6 +352,53 @@ body {
     flex-wrap: wrap;
 }
 
+/* ── Prerequisites ── */
+.prereqs {
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    text-align: left;
+}
+
+.prereqs-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.prereq-row {
+    padding: 1rem 0;
+}
+
+.prereq-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.prereq-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.35rem;
+    line-height: 1.55;
+}
+
+.prereq-link {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4f46e5;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.prereq-link:hover {
+    color: #7c3aed;
+}
+
 /* ── Footer ── */
 footer {
     text-align: center;
