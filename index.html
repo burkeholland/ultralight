@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ultralight — Multi-Model Orchestration for VS Code</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code that uses the best AI model for every task — Sonnet for planning, Codex for coding, Gemini for design.">
+    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code that uses the best AI model for every task — Sonnet orchestrates, Opus plans, Codex codes, Gemini designs.">
 </head>
 <body>
 
@@ -19,34 +19,40 @@
     <main class="container">
 
         <section class="hero">
-            <h1>The right model<br>for the <span class="gradient-text">right job</span></h1>
+            <h1>The right model<br>for the <span class="accent-coral">right job</span></h1>
             <p class="hero-sub">A multi-agent orchestration framework for VS Code. Opus plans. Codex codes. Gemini designs. One prompt is all it takes.</p>
             <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary">Install in VS Code</a>
         </section>
 
         <section class="flow" aria-label="Orchestration flow">
             <div class="flow-label">How it works</div>
-            <div class="flow-step">
-                <span class="flow-step-name">Your Prompt</span>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-                <span class="flow-step-name">Orchestrator</span>
-                <span class="flow-step-model">Claude Sonnet</span>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-branches">
-                <div class="flow-branch">
-                    <span class="flow-branch-name">Planner</span>
-                    <span class="flow-branch-model">Claude Opus</span>
+            <div class="pipeline">
+                <div class="pipeline-node node-input">
+                    <span class="node-label">Your Prompt</span>
                 </div>
-                <div class="flow-branch">
-                    <span class="flow-branch-name">Coder</span>
-                    <span class="flow-branch-model">GPT-5.3-Codex</span>
+                <div class="pipeline-line"></div>
+                <div class="pipeline-node node-orchestrator">
+                    <span class="node-model">Claude Sonnet</span>
+                    <span class="node-label">Orchestrator</span>
                 </div>
-                <div class="flow-branch">
-                    <span class="flow-branch-name">Designer</span>
-                    <span class="flow-branch-model">Gemini 3.1</span>
+                <div class="pipeline-fan">
+                    <div class="fan-line fan-top"></div>
+                    <div class="fan-line fan-mid"></div>
+                    <div class="fan-line fan-bot"></div>
+                </div>
+                <div class="pipeline-agents">
+                    <div class="pipeline-node node-planner">
+                        <span class="node-model">Claude Opus</span>
+                        <span class="node-label">Planner</span>
+                    </div>
+                    <div class="pipeline-node node-coder">
+                        <span class="node-model">GPT-5.3-Codex</span>
+                        <span class="node-label">Coder</span>
+                    </div>
+                    <div class="pipeline-node node-designer">
+                        <span class="node-model">Gemini 3.1</span>
+                        <span class="node-label">Designer</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -55,7 +61,7 @@
             <div class="agent-row">
                 <div class="agent-name">
                     <span class="agent-model">Claude Sonnet</span>
-                    <span class="agent-role gradient-text">Orchestrator</span>
+                    <span class="agent-role accent-coral">Orchestrator</span>
                 </div>
                 <p class="agent-desc">Receives your request, analyzes context, and delegates to specialized agents. Integrates results and validates the final output. The brain of the operation.</p>
             </div>
@@ -63,7 +69,7 @@
             <div class="agent-row">
                 <div class="agent-name">
                     <span class="agent-model">Claude Opus 4.6</span>
-                    <span class="agent-role gradient-text">Planner</span>
+                    <span class="agent-role accent-sky">Planner</span>
                 </div>
                 <p class="agent-desc">Researches the codebase, consults documentation, and creates comprehensive implementation plans. Identifies edge cases before a single line of code is written.</p>
             </div>
@@ -71,7 +77,7 @@
             <div class="agent-row">
                 <div class="agent-name">
                     <span class="agent-model">GPT-5.3-Codex</span>
-                    <span class="agent-role gradient-text">Coder</span>
+                    <span class="agent-role accent-coral">Coder</span>
                 </div>
                 <p class="agent-desc">Writes production code following strict principles — structure, architecture, naming, error handling. Built for precision and consistency.</p>
             </div>
@@ -79,7 +85,7 @@
             <div class="agent-row">
                 <div class="agent-name">
                     <span class="agent-model">Gemini 3.1</span>
-                    <span class="agent-role gradient-text">Designer</span>
+                    <span class="agent-role accent-sage">Designer</span>
                 </div>
                 <p class="agent-desc">Handles all UI/UX and design work with emphasis on usability, accessibility, and aesthetics. Makes things look and feel right.</p>
             </div>
@@ -92,17 +98,13 @@
             <div class="prereqs">
                 <h3 class="prereqs-label">Prerequisites</h3>
                 <div class="prereq-row">
-                    <div class="prereq-name">
-                        <span class="prereq-title">Context7 MCP Server</span>
-                    </div>
+                    <span class="prereq-title">Context7 MCP Server</span>
                     <p class="prereq-desc">Provides up-to-date documentation lookup for any library. Used by the Coder agent to write accurate, current code.</p>
                     <a href="https://context7.com" class="prereq-link" target="_blank" rel="noopener">context7.com →</a>
                 </div>
                 <hr class="divider">
                 <div class="prereq-row">
-                    <div class="prereq-name">
-                        <span class="prereq-title">Frontend Design Skill</span>
-                    </div>
+                    <span class="prereq-title">Frontend Design Skill</span>
                     <p class="prereq-desc">A reusable skill from skills.sh that gives the Designer agent advanced frontend and UI capabilities.</p>
                     <a href="https://skills.sh" class="prereq-link" target="_blank" rel="noopener">skills.sh →</a>
                 </div>
