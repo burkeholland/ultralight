@@ -1,6 +1,6 @@
 # ultralight
 
-A multi-agent orchestration framework for VS Code. Uses the best AI model for every task — Claude Sonnet orchestrates, GPT-5.3-Codex codes, GPT-5.2 plans, and Gemini designs.
+A multi-agent orchestration framework for VS Code. Uses the best AI model for every task — Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, and Gemini 3.1 Pro (Preview) designs.
 
 ## Install
 
