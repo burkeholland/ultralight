@@ -93,7 +93,35 @@
 
         <section class="install" id="install">
             <h2>Get Started</h2>
-            <p class="install-sub">Install the agents into VS Code. Enable <em>Use custom agent in Subagent</em> and <em>Memory</em> in settings.</p>
+            <p class="install-sub">Install all four agents in a single step using the Agent Plugin format.</p>
+
+            <div class="plugin-install">
+                <div class="plugin-install-steps">
+                    <div class="plugin-step">
+                        <span class="plugin-step-num">1</span>
+                        <span class="plugin-step-text">Open the VS Code Command Palette <kbd>⌘⇧P</kbd> and run <strong>Chat: Install Plugin From Source</strong></span>
+                    </div>
+                    <div class="plugin-step">
+                        <span class="plugin-step-num">2</span>
+                        <span class="plugin-step-text">Paste the URL and press Enter:</span>
+                    </div>
+                    <div class="plugin-url-row">
+                        <code class="plugin-url" id="plugin-url">https://github.com/burkeholland/ultralight</code>
+                        <button class="btn btn-outline btn-sm copy-btn" onclick="navigator.clipboard.writeText('https://github.com/burkeholland/ultralight').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',2000)})">Copy</button>
+                    </div>
+                    <div class="plugin-step">
+                        <span class="plugin-step-num">3</span>
+                        <span class="plugin-step-text">All 4 agents install in one step. 🎉</span>
+                    </div>
+                </div>
+                <div class="plugin-settings-note">
+                    <strong>Required VS Code settings:</strong>
+                    <ul>
+                        <li><code>chat.plugins.enabled</code></li>
+                        <li><code>chat.subagents.allowInvocationsFromSubagents</code></li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="prereqs">
                 <h3 class="prereqs-label">Prerequisites</h3>
@@ -110,52 +138,55 @@
                 </div>
             </div>
 
-            <div class="install-cards">
-                <div class="install-card">
-                    <div class="install-card-header">
-                        <span class="install-card-name">Orchestrator</span>
-                        <span class="install-card-model">Claude Opus 4.6</span>
+            <details class="manual-install">
+                <summary class="manual-install-summary">Manual Install (individual agents)</summary>
+                <div class="install-cards">
+                    <div class="install-card">
+                        <div class="install-card-header">
+                            <span class="install-card-name">Orchestrator</span>
+                            <span class="install-card-model">Claude Opus 4.6</span>
+                        </div>
+                        <p class="install-card-desc">The brain — receives your prompt, calls the Planner, then delegates work to Coder and Designer in parallel phases.</p>
+                        <div class="install-card-buttons">
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-outline btn-sm">VS Code</a>
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
+                        </div>
                     </div>
-                    <p class="install-card-desc">The brain — receives your prompt, calls the Planner, then delegates work to Coder and Designer in parallel phases.</p>
-                    <div class="install-card-buttons">
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-outline btn-sm">VS Code</a>
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Forchestrator.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
+                    <div class="install-card">
+                        <div class="install-card-header">
+                            <span class="install-card-name">Planner</span>
+                            <span class="install-card-model">Claude Opus 4.6</span>
+                        </div>
+                        <p class="install-card-desc">Researches the codebase and documentation, then produces step-by-step plans with file assignments.</p>
+                        <div class="install-card-buttons">
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fplanner.agent.md" class="btn btn-outline btn-sm">VS Code</a>
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fplanner.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
+                        </div>
+                    </div>
+                    <div class="install-card">
+                        <div class="install-card-header">
+                            <span class="install-card-name">Coder</span>
+                            <span class="install-card-model">GPT-5.3-Codex</span>
+                        </div>
+                        <p class="install-card-desc">Writes production code following strict coding principles. Uses Context7 for up-to-date documentation.</p>
+                        <div class="install-card-buttons">
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fcoder.agent.md" class="btn btn-outline btn-sm">VS Code</a>
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fcoder.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
+                        </div>
+                    </div>
+                    <div class="install-card">
+                        <div class="install-card-header">
+                            <span class="install-card-name">Designer</span>
+                            <span class="install-card-model">Gemini 3.1 Pro (Preview)</span>
+                        </div>
+                        <p class="install-card-desc">Handles all UI/UX — color palettes, layouts, component styling. Uses the Frontend Design skill.</p>
+                        <div class="install-card-buttons">
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fdesigner.agent.md" class="btn btn-outline btn-sm">VS Code</a>
+                            <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fdesigner.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
+                        </div>
                     </div>
                 </div>
-                <div class="install-card">
-                    <div class="install-card-header">
-                        <span class="install-card-name">Planner</span>
-                        <span class="install-card-model">Claude Opus 4.6</span>
-                    </div>
-                    <p class="install-card-desc">Researches the codebase and documentation, then produces step-by-step plans with file assignments.</p>
-                    <div class="install-card-buttons">
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fplanner.agent.md" class="btn btn-outline btn-sm">VS Code</a>
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fplanner.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
-                    </div>
-                </div>
-                <div class="install-card">
-                    <div class="install-card-header">
-                        <span class="install-card-name">Coder</span>
-                        <span class="install-card-model">GPT-5.3-Codex</span>
-                    </div>
-                    <p class="install-card-desc">Writes production code following strict coding principles. Uses Context7 for up-to-date documentation.</p>
-                    <div class="install-card-buttons">
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fcoder.agent.md" class="btn btn-outline btn-sm">VS Code</a>
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fcoder.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
-                    </div>
-                </div>
-                <div class="install-card">
-                    <div class="install-card-header">
-                        <span class="install-card-name">Designer</span>
-                        <span class="install-card-model">Gemini 3.1 Pro (Preview)</span>
-                    </div>
-                    <p class="install-card-desc">Handles all UI/UX — color palettes, layouts, component styling. Uses the Frontend Design skill.</p>
-                    <div class="install-card-buttons">
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fdesigner.agent.md" class="btn btn-outline btn-sm">VS Code</a>
-                        <a href="https://aka.ms/awesome-copilot/install/agent?url=vscode-insiders%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fgist.githubusercontent.com%2Fburkeholland%2F0e68481f96e94bbb98134fa6efd00436%2Fraw%2Fdesigner.agent.md" class="btn btn-primary btn-sm">VS Code Insiders</a>
-                    </div>
-                </div>
-            </div>
+            </details>
         </section>
 
     </main>

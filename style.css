@@ -552,3 +552,139 @@ footer a:hover {
         margin-right: 0;
     }
 }
+
+/* Plugin Install Section */
+.plugin-install {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.plugin-install-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.plugin-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.plugin-step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    min-width: 1.75rem;
+    border-radius: 50%;
+    background: var(--accent-coral);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.plugin-step-text {
+    padding-top: 0.2rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.plugin-url-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 2.75rem;
+}
+
+.plugin-url {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.9rem;
+    color: var(--accent-sky);
+    white-space: nowrap;
+    overflow: auto;
+    flex: 1;
+}
+
+.copy-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.plugin-settings-note {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.plugin-settings-note strong {
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.plugin-settings-note ul {
+    margin: 0;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.5rem;
+    list-style: disc;
+}
+
+.plugin-settings-note code {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.82rem;
+    background: var(--surface);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+}
+
+/* Manual install accordion */
+.manual-install {
+    margin-top: 2.5rem;
+}
+
+.manual-install-summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    user-select: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+}
+
+.manual-install-summary::-webkit-details-marker { display: none; }
+
+.manual-install-summary::before {
+    content: '▶';
+    font-size: 0.65rem;
+    transition: transform 0.2s;
+    display: inline-block;
+}
+
+details[open] .manual-install-summary::before {
+    transform: rotate(90deg);
+}
+
+.manual-install .install-cards {
+    margin-top: 1.5rem;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Ultralight",
+  "description": "Multi-model orchestration for VS Code Copilot. Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, Gemini 3.1 Pro designs.",
+  "version": "1.0.0"
+}
