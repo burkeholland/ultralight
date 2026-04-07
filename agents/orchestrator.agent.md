@@ -1,7 +1,7 @@
 ---
 name: Orchestrator
 description: Breaks requests into phases and delegates to specialist subagents in parallel.
-model: Claude Opus 4.6
+model: Claude Sonnet 4.6
 tools: ['read', 'agent', 'memory']
 agents: ['Planner', 'Coder', 'Designer']
 ---
