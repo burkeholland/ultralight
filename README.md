@@ -32,6 +32,15 @@ You can also install agents one at a time from the [gist](https://gist.github.co
 
 Agent definitions live in the [`agents/`](./agents) directory.
 
+## Bundled Tools
+
+The plugin includes these out of the box — no extra setup required:
+
+| Tool | Type | Purpose |
+|------|------|---------|
+| [Context7](https://context7.com) | MCP Server | Up-to-date documentation lookup for any library |
+| [Frontend Design](https://github.com/anthropics/skills) | Skill | Production-grade UI/UX design guidance (Anthropic) |
+
 ## Website
 
-Hosted on GitHub Pages.
+Hosted on GitHub Pages at [burkeholland.github.io/ultralight](https://burkeholland.github.io/ultralight).

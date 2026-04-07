@@ -1,8 +1,9 @@
 ---
 name: Orchestrator
-description: Sonnet, Codex, Gemini
-model: Claude Opus 4.6 (copilot)
-tools: ['read/readFile', 'agent', 'memory']
+description: Breaks requests into phases and delegates to specialist subagents in parallel.
+model: Claude Opus 4.6
+tools: ['read', 'agent', 'memory']
+agents: ['Planner', 'Coder', 'Designer']
 ---
 
 <!-- Note: Memory is experimental at the moment. You'll need to be in VS Code Insiders and toggle on memory in settings -->
