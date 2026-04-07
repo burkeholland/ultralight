@@ -1,7 +1,7 @@
 ---
 name: Designer
 description: Handles all UI/UX design tasks.
-model: Gemini 3.1 Pro (Preview)
+model: Claude Opus 4.6
 tools: ['vscode', 'execute', 'read', 'agent', 'context7/*', 'edit', 'search', 'web', 'memory', 'todo']
 ---
 
