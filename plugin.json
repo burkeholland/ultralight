@@ -1,6 +1,6 @@
 {
   "name": "ultralight",
-  "description": "Multi-model orchestration for VS Code Copilot. Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, Gemini 3.1 Pro designs.",
+  "description": "Multi-model orchestration for VS Code Copilot. Claude Sonnet 4.6 orchestrates, Claude Opus 4.6 plans and designs, GPT-5.3-Codex codes.",
   "version": "1.0.0",
   "repository": "https://github.com/burkeholland/ultralight",
   "license": "MIT",

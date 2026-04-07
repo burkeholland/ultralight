@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ultralight — Multi-Model Orchestration for VS Code</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code. Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, Gemini 3.1 Pro (Preview) designs. It researches your codebase, builds a plan, parallelizes work across subagents, and follows strict coding principles.">
+    <meta name="description" content="Ultralight is a multi-agent orchestration framework for VS Code. Claude Sonnet 4.6 orchestrates, Claude Opus 4.6 plans and designs, GPT-5.3-Codex codes. It researches your codebase, builds a plan, parallelizes work across subagents, and follows strict coding principles.">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 
         <section class="hero">
             <h1>The right model<br>for the <span class="accent-coral">right job</span></h1>
-            <p class="hero-sub">A multi-agent orchestration framework for VS Code that researches your codebase, builds a phased plan, and delegates work to specialist subagents running in parallel. Claude Opus 4.6 orchestrates and plans. GPT-5.3-Codex writes the code. Gemini 3.1 Pro (Preview) handles design. One prompt is all it takes.</p>
+            <p class="hero-sub">A multi-agent orchestration framework for VS Code that researches your codebase, builds a phased plan, and delegates work to specialist subagents running in parallel. Claude Sonnet 4.6 orchestrates. Claude Opus 4.6 plans and designs. GPT-5.3-Codex writes the code. One prompt is all it takes.</p>
             <a href="#install" class="btn btn-primary">Install Agents</a>
         </section>
 
@@ -32,7 +32,7 @@
                 </div>
                 <div class="pipeline-line"></div>
                 <div class="pipeline-node node-orchestrator">
-                    <span class="node-model">Claude Opus 4.6</span>
+                    <span class="node-model">Claude Sonnet 4.6</span>
                     <span class="node-label">Orchestrator</span>
                 </div>
                 <div class="pipeline-fan">
@@ -50,7 +50,7 @@
                         <span class="node-label">Coder</span>
                     </div>
                     <div class="pipeline-node node-designer">
-                        <span class="node-model">Gemini 3.1 Pro (Preview)</span>
+                        <span class="node-model">Claude Opus 4.6</span>
                         <span class="node-label">Designer</span>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
         <section class="agents">
             <div class="agent-row">
                 <div class="agent-name">
-                    <span class="agent-model">Claude Opus 4.6</span>
+                    <span class="agent-model">Claude Sonnet 4.6</span>
                     <span class="agent-role accent-coral">Orchestrator</span>
                 </div>
                 <p class="agent-desc">Breaks your request into phased execution plans, detects file overlaps to determine what can run in parallel, and delegates to specialist agents. It tells agents <em>what</em> to build — never <em>how</em> — so each one operates with full autonomy. Coordinates everything, implements nothing.</p>
@@ -84,7 +84,7 @@
             <hr class="divider">
             <div class="agent-row">
                 <div class="agent-name">
-                    <span class="agent-model">Gemini 3.1 Pro (Preview)</span>
+                    <span class="agent-model">Claude Opus 4.6</span>
                     <span class="agent-role accent-sage">Designer</span>
                 </div>
                 <p class="agent-desc">Owns all UI/UX — color palettes, component styling, layout, and visual design. Assigned to distinct component subtrees so design work runs in parallel with logic implementation without stepping on anyone's toes.</p>
@@ -144,7 +144,7 @@
                     <div class="install-card">
                         <div class="install-card-header">
                             <span class="install-card-name">Orchestrator</span>
-                            <span class="install-card-model">Claude Opus 4.6</span>
+                            <span class="install-card-model">Claude Sonnet 4.6</span>
                         </div>
                         <p class="install-card-desc">The brain — receives your prompt, calls the Planner, then delegates work to Coder and Designer in parallel phases.</p>
                         <div class="install-card-buttons">
@@ -177,7 +177,7 @@
                     <div class="install-card">
                         <div class="install-card-header">
                             <span class="install-card-name">Designer</span>
-                            <span class="install-card-model">Gemini 3.1 Pro (Preview)</span>
+                            <span class="install-card-model">Claude Opus 4.6</span>
                         </div>
                         <p class="install-card-desc">Handles all UI/UX — color palettes, layouts, component styling. Uses the Frontend Design skill.</p>
                         <div class="install-card-buttons">

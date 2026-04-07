@@ -1,6 +1,6 @@
 # ultralight
 
-A multi-agent orchestration framework for VS Code. Uses the best AI model for every task — Claude Opus 4.6 orchestrates and plans, GPT-5.3-Codex codes, and Gemini 3.1 Pro (Preview) designs.
+A multi-agent orchestration framework for VS Code. Uses the best AI model for every task — Claude Sonnet 4.6 orchestrates, Claude Opus 4.6 plans and designs, and GPT-5.3-Codex codes.
 
 ## Install as Plugin (recommended)
 
@@ -25,10 +25,10 @@ You can also install agents one at a time from the [gist](https://gist.github.co
 
 | Agent | Model | Role |
 |-------|-------|------|
-| Orchestrator | Claude Opus 4.6 | Breaks requests into phases, delegates to specialists |
+| Orchestrator | Claude Sonnet 4.6 | Breaks requests into phases, delegates to specialists |
 | Planner | Claude Opus 4.6 | Researches codebase, produces step-by-step plans |
 | Coder | GPT-5.3-Codex | Writes production code |
-| Designer | Gemini 3.1 Pro (Preview) | Handles all UI/UX |
+| Designer | Claude Opus 4.6 | Handles all UI/UX |
 
 Agent definitions live in the [`agents/`](./agents) directory.
 
